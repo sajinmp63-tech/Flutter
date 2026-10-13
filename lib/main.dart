@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'main.freezed.dart';
+// part 'main.g.dart';
+
+@freezed
+class Person({
+  required final String firstName,
+  required final String lastName,
+  required final int age,
+  required final DateTime birthDate,
+}) with _$Person;
 void main() {
   runApp(const MyApp());
 }
